@@ -6,8 +6,8 @@
 
 ```bash
 #!/bin/bash
-count=$(cat "$1" | wc -m)
-commitRegex='^(\[\d{2}-[a-zA-Z]+|merge)(-\d{2}-[a-zA-Z]+|merge)(\])'
+count=$(cat "$1" | wc -m)	# В параметре $1 передается файл .git/COMMIT_EDITMSG в который записывается последний комментарий для коммита
+commitRegex='^(\[\d{2}-[a-zA-Z]+|merge)(-\d{2}-[a-zA-Z]+|merge)(\])'	# Регулярка на поиск "[XX-name_module-XX-topic]"
 if [[ $count -lt 1 ]] || [[ $count -gt 31 ]]	# Проверка на количество символов
 then
 	echo "The number of characters must be no more than 30"
