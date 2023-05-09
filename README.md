@@ -1,4 +1,5 @@
 Переименовываем .git/hooks/commit-msg.sample в .git/hooks/commit-msg
+<br>
 Этот хук отклонит коммит если сообщение больше 30 символов и если сообщения не соотверсивует требованиям: "[XX-name_module-XX-topic]"
 
 Содержимое .git/hooks/commit-msg:
